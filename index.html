@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP MÈO BÉO - Cày Thuê & Bán Acc Roblox Uy Tín</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f19; color: #f3f4f6; }
+        .neon-glow { box-shadow: 0 0 15px rgba(255, 0, 127, 0.4); }
+        .neon-border { border: 1px solid rgba(255, 0, 127, 0.5); }
+        .category-card { background: linear-gradient(145deg, #131b2e, #0d1322); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .category-card:hover { border-color: #ff007f; box-shadow: 0 0 20px rgba(255, 0, 127, 0.2); }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-[#0b0f19]/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleMenu()" class="text-gray-300 hover:text-pink-500 text-xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="flex items-center space-x-2">
+                    <span class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-extrabold px-3 py-1.5 rounded-xl text-lg neon-glow">🐱 MÈO BÉO</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <div class="bg-gray-900 border border-gray-700 px-3 py-1.5 rounded-full flex items-center space-x-2">
+                    <i class="fa-solid fa-wallet text-yellow-400"></i>
+                    <span class="text-xs text-gray-400">Số dư:</span>
+                    <span class="font-bold text-green-400 text-sm">0đ</span>
+                </div>
+                <button onclick="openModal('napTienModal')" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-bold px-3 py-2 rounded-xl neon-glow transition">
+                    <i class="fa-solid fa-plus-circle mr-1"></i> Nạp Tiền
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SIDEBAR MENU (DRAWER) -->
+    <div id="sidebarOverlay" onclick="toggleMenu()" class="fixed inset-0 bg-black/70 z-50 hidden transition-opacity"></div>
+    <div id="sidebar" class="fixed top-0 left-0 bottom-0 w-72 bg-[#0d1322] border-r border-gray-800 z-50 transform -translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-4 border-b border-gray-800 flex items-center justify-between">
+            <span class="font-bold text-pink-500 text-lg">SHOP MÈO BÉO</span>
+            <button onclick="toggleMenu()" class="text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+        <div class="p-4 space-y-2 flex-1 overflow-y-auto">
+            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800 text-gray-200"><i class="fa-solid fa-house text-pink-500 w-5"></i><span>Trang Chủ</span></a>
+            <a href="#" onclick="openModal('napTienModal'); toggleMenu();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800 text-gray-200"><i class="fa-solid fa-wallet text-green-400 w-5"></i><span>Nạp Tiền (QR & Thẻ)</span></a>
+            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800 text-gray-200"><i class="fa-solid fa-gamepad text-purple-400 w-5"></i><span>Mua Tài Khoản Roblox</span></a>
+            <a href="#" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800 text-gray-200"><i class="fa-solid fa-bolt text-yellow-400 w-5"></i><span>Dịch Vụ Cày Thuê</span></a>
+            <a href="https://zalo.me/0869318203" target="_blank" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800 text-gray-200"><i class="fa-solid fa-headset text-blue-400 w-5"></i><span>Hỗ Trợ Zalo (0869318203)</span></a>
+        </div>
+        <div class="p-4 border-t border-gray-800 text-xs text-center text-gray-500">
+            Hotline/Zalo: 0869318203
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 py-6 flex-1 w-full space-y-6">
+
+        <!-- BANNER THÔNG BÁO / HOT COMBO -->
+        <div class="bg-gradient-to-r from-pink-900/40 via-purple-900/40 to-blue-900/40 border border-pink-500/30 rounded-2xl p-4 text-center relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 text-pink-500/10 text-9xl font-extrabold pointer-events-none">🐱</div>
+            <h2 class="text-xl font-extrabold text-pink-400 mb-1"><i class="fa-solid fa-fire mr-1 text-yellow-400"></i> COMBO HOT BLOX FRUIT</h2>
+            <p class="text-sm text-gray-300 mb-3">lv1-max + soul guitar + cdk + godhuman + gạt cần: <span class="text-yellow-400 font-bold">100k</span></p>
+            <button onclick="chonDichVu('Combo Siêu Hot Blox Fruit', '100k')" class="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white font-bold px-6 py-2 rounded-xl text-sm neon-glow transition">
+                Đặt Nhanh Combo
+            </button>
+        </div>
+
+        <!-- BẢNG GIÁ DỊCH VỤ CHÍNH -->
+        <h2 class="text-lg font-bold text-gray-200 border-l-4 border-pink-500 pl-3">BẢNG GIÁ CÀY THUÊ BLOX FRUIT</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- CÀY LEVEL -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-blue-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>CÀY LEVEL</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('Lv 1 -> 700', '10k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Lv 1 ➔ 700</span>
+                        <span class="text-yellow-400 font-bold">10k</span>
+                    </div>
+                    <div onclick="chonDichVu('Lv 700 -> 1500', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Lv 700 ➔ 1500</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                    <div onclick="chonDichVu('Lv 1500 -> max', '30k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Lv 1500 ➔ max</span>
+                        <span class="text-yellow-400 font-bold">30k</span>
+                    </div>
+                    <div onclick="chonDichVu('Lv 1 -> Max', '60k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Lv 1 ➔ Max</span>
+                        <span class="text-yellow-400 font-bold">60k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÀY MASTERY -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-purple-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>CÀY MASTERY</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('1 ➔ 300 (vũ khí)', '10k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">1 ➔ 300 (vũ khí)</span>
+                        <span class="text-yellow-400 font-bold">10k</span>
+                    </div>
+                    <div onclick="chonDichVu('1 ➔ 300 (cây trái)', '30k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">1 ➔ 300 (cây trái)</span>
+                        <span class="text-yellow-400 font-bold">30k</span>
+                    </div>
+                    <div onclick="chonDichVu('1 ➔ 600 (vũ khí)', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">1 ➔ 600 (vũ khí)</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                    <div onclick="chonDichVu('1 ➔ 600 (cây trái)', '50k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">1 ➔ 600 (cây trái)</span>
+                        <span class="text-yellow-400 font-bold">50k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÀY BELI & FRAGMENT -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-green-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-coins"></i>
+                    <span>BELI & FRAGMENT</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('5M Beli', '10k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">5M Beli</span>
+                        <span class="text-yellow-400 font-bold">10k</span>
+                    </div>
+                    <div onclick="chonDichVu('50M Beli', '70k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">50M Beli</span>
+                        <span class="text-yellow-400 font-bold">70k</span>
+                    </div>
+                    <div onclick="chonDichVu('5K Fragment', '5k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">5K Fragment</span>
+                        <span class="text-yellow-400 font-bold">5k</span>
+                    </div>
+                    <div onclick="chonDichVu('20K Fragment', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">20K Fragment</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CÀY VŨ KHÍ -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-red-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-sword"></i>
+                    <span>CÀY VŨ KHÍ</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('Yama', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Yama</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                    <div onclick="chonDichVu('Tushita', '25k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Tushita</span>
+                        <span class="text-yellow-400 font-bold">25k</span>
+                    </div>
+                    <div onclick="chonDichVu('CDK (Cursed Dual Katana)', '30k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">CDK</span>
+                        <span class="text-yellow-400 font-bold">30k</span>
+                    </div>
+                    <div onclick="chonDichVu('Soul Guitar', '25k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Soul Guitar</span>
+                        <span class="text-yellow-400 font-bold">25k</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CÁC DỊCH VỤ KHÁC (TỘC V4, DRACO, NHIỆM VỤ) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- TỘC V2 / V3 / V4 -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-yellow-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>LẤY TỘC V2 / V3 / V4</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('Tộc Người V2/V3', '2k / 5k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Người / Thỏ / Cá / Thiên Thần</span>
+                        <span class="text-yellow-400 font-bold">2k / 5k</span>
+                    </div>
+                    <div onclick="chonDichVu('Full 5 Tộc V4', '250k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Full 5 Tộc V4</span>
+                        <span class="text-yellow-400 font-bold">250k</span>
+                    </div>
+                    <div onclick="chonDichVu('Gạt Cần V4', '40k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Gạt Cần</span>
+                        <span class="text-yellow-400 font-bold">40k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NHIỆM VỤ & VẬT PHẨM -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-cyan-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-scroll"></i>
+                    <span>NHIỆM VỤ - VẬT PHẨM</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('Sanguine Art', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Sanguine Art</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                    <div onclick="chonDichVu('Godhuman', '40k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Godhuman</span>
+                        <span class="text-yellow-400 font-bold">40k</span>
+                    </div>
+                    <div onclick="chonDichVu('Kẹo tím về tiki', '50k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Kẹo tím về tiki</span>
+                        <span class="text-yellow-400 font-bold">50k</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRACO & BẢNG GIÁ KHÁC -->
+            <div class="category-card rounded-2xl p-4 space-y-3">
+                <div class="flex items-center space-x-2 text-emerald-400 font-bold border-b border-gray-800 pb-2">
+                    <i class="fa-solid fa-dragon"></i>
+                    <span>DRACO & KHÁC</span>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div onclick="chonDichVu('Draco V1 full đai', '20k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Draco V1 full đai</span>
+                        <span class="text-yellow-400 font-bold">20k</span>
+                    </div>
+                    <div onclick="chonDichVu('Draco V4 Full Gear', '50k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Draco V4 Full Gear</span>
+                        <span class="text-yellow-400 font-bold">50k</span>
+                    </div>
+                    <div onclick="chonDichVu('Lấy full 8 đai', '60k')" class="flex justify-between items-center bg-gray-900/60 p-2.5 rounded-xl cursor-pointer hover:bg-gray-800 transition">
+                        <span class="text-gray-300">Lấy full 8 đai</span>
+                        <span class="text-yellow-400 font-bold">60k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0d1322] border-t border-gray-800 py-6 mt-10 text-center text-xs text-gray-400 space-y-2">
+        <p class="font-bold text-pink-500 text-sm">SHOP MÈO BÉO - UY TÍN TẠO NIỀM TIN</p>
+        <p>Zalo Hỗ Trợ: <span class="text-yellow-400 font-bold">0869318203</span></p>
+        <p>© 2026 - All Rights Reserved</p>
+    </footer>
+
+    <!-- MODAL NẠP TIỀN (QR & THẺ CÀO) -->
+    <div id="napTienModal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-[#131b2e] border border-gray-700 w-full max-w-md rounded-2xl p-6 space-y-4 relative">
+            <button onclick="closeModal('napTienModal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <h3 class="text-lg font-bold text-pink-500 text-center">NẠP TIỀN VÀO TÀI KHOẢN</h3>
+            
+            <div class="flex border-b border-gray-700">
+                <button onclick="switchTab('qr')" id="tabQrBtn" class="flex-1 pb-2 text-center font-bold text-pink-500 border-b-2 border-pink-500 text-sm">Chuyển Khoản QR</button>
+                <button onclick="switchTab('thecao')" id="tabTheBtn" class="flex-1 pb-2 text-center font-semibold text-gray-400 text-sm">Nạp Thẻ Cào</button>
+            </div>
+
+            <!-- Tab QR Ngân Hàng -->
+            <div id="contentQr" class="space-y-3 text-center">
+                <p class="text-xs text-gray-300">Quét mã QR qua app ngân hàng hoặc Momo:</p>
+                <div class="bg-white p-3 rounded-xl inline-block">
+                    <!-- Ảnh QR VietQR theo đúng dữ liệu Le Duc Phat -->
+                    <img src="https://img.vietqr.io/image/970422-0869318203-compact2.jpg?amount=0&addInfo=NAP%20MEOBEO&accountName=LE%20DUC%20PHAT" alt="QR Ngân Hàng" class="w-48 h-48 mx-auto rounded-lg">
+                </div>
+   
